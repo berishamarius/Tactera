@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Platform | K-Eye Football Intelligence</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+<body data-page="platform">
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark"></div>
+        <div>
+          <div class="brand-title">K-Eye Football Intelligence</div>
+          <span class="brand-subtitle">Architecture, APIs, access control and AI stack</span>
+        </div>
+      </div>
+      <nav class="nav">
+        <a data-nav="dashboard" href="index.html">Dashboard</a>
+        <a data-nav="players" href="players.html">Players</a>
+        <a data-nav="club" href="club-dna.html">Club DNA</a>
+        <a data-nav="video" href="video.html">Video</a>
+        <a data-nav="reports" href="reports.html">Reports</a>
+        <a data-nav="platform" href="platform.html">Platform</a>
+        <a data-nav="settings" href="settings.html">Settings</a>
+      </nav>
+      <div class="topbar-actions">
+        <span class="pill">API-ready architecture</span>
+        <a class="btn btn-primary" href="index.html">Back to system</a>
+      </div>
+    </header>
+
+    <section class="page-hero">
+      <div class="hero-card" data-fade>
+        <span class="kicker">Platform design</span>
+        <h1 class="hero-title">The system is built from ingestion to decision support.</h1>
+        <p class="hero-copy">This page makes the hidden machinery visible: data sources, storage, security, model layers and how the club-facing product is separated from the analysis backend.</p>
+        <div class="hero-actions">
+          <span class="chip info"><strong>LLM:</strong> Claude Haiku for cheap report generation</span>
+          <span class="chip warn"><strong>Core scoring:</strong> deterministic + explainable</span>
+        </div>
+      </div>
+      <div class="panel" data-fade>
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Architecture summary</h2>
+            <p class="section-copy">A modular system that can scale from MVP to tracking and CV.</p>
+          </div>
+        </div>
+        <div class="stack" data-stack></div>
+      </div>
+    </section>
+
+    <section class="layout-grid">
+      <div class="panel span-6" data-fade>
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Necessary APIs</h2>
+            <p class="section-copy">The product can be implemented with a staged integration strategy.</p>
+          </div>
+        </div>
+        <div class="list">
+          <div class="tree-item"><strong>Sportmonks Football API</strong><span class="body-muted">Player, team, league and statistics baseline for the MVP.</span></div>
+          <div class="tree-item"><strong>Video storage</strong><span class="body-muted">S3-compatible storage for uploads, clips, thumbnails and permissioned access.</span></div>
+          <div class="tree-item"><strong>Tracking data</strong><span class="body-muted">SkillCorner or similar provider when the club reaches the tracking stage.</span></div>
+          <div class="tree-item"><strong>Search layer</strong><span class="body-muted">PostgreSQL plus pgvector for filterable search and internal reference matching.</span></div>
+        </div>
+      </div>
+
+      <div class="panel span-6" data-fade>
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Security model</h2>
+            <p class="section-copy">A club system needs clear access rules and traceability.</p>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div class="arch-card"><strong>Roles</strong><p class="body-muted">Scout, analyst, sporting director, admin and read-only stakeholder.</p></div>
+          <div class="arch-card"><strong>RLS</strong><p class="body-muted">Row-level security keeps club data partitioned and protected.</p></div>
+          <div class="arch-card"><strong>Audit</strong><p class="body-muted">Every shortlist, annotation and export is logged with provenance.</p></div>
+          <div class="arch-card"><strong>Privacy</strong><p class="body-muted">Video rights and player data usage stay explicit and contract-aware.</p></div>
+        </div>
+      </div>
+
+      <div class="panel span-12" data-fade>
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Build phases</h2>
+            <p class="section-copy">The roadmap is intentionally staged so the platform remains usable before the CV stack matures.</p>
+          </div>
+        </div>
+        <div class="grid-3">
+          <div class="tactic-card"><div class="card-label">Phase 1</div><p class="body-muted">Data ingestion, normalization, club DNA, fit-matching and explainable shortlists.</p></div>
+          <div class="tactic-card"><div class="card-label">Phase 2</div><p class="body-muted">Tracking integration, video analysis, off-ball metrics and stronger under-the-radar detection.</p></div>
+          <div class="tactic-card"><div class="card-label">Phase 3</div><p class="body-muted">Monitoring during the season, automated re-ranking and richer model-assisted workflows.</p></div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video | K-Eye Football Intelligence</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+<body data-page="video">
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark"></div>
+        <div>
+          <div class="brand-title">K-Eye Football Intelligence</div>
+          <span class="brand-subtitle">Video upload, analysis and annotation pipeline</span>
+        </div>
+      </div>
+      <nav class="nav">
+        <a data-nav="dashboard" href="index.html">Dashboard</a>
+        <a data-nav="players" href="players.html">Players</a>
+        <a data-nav="club" href="club-dna.html">Club DNA</a>
+        <a data-nav="video" href="video.html">Video</a>
+        <a data-nav="reports" href="reports.html">Reports</a>
+        <a data-nav="platform" href="platform.html">Platform</a>
+        <a data-nav="settings" href="settings.html">Settings</a>
+      </nav>
+      <div class="topbar-actions">
+        <span class="pill">Broadcast-aware processing</span>
+        <a class="btn btn-primary" href="platform.html">See architecture</a>
+      </div>
+    </header>
+
+    <section class="page-hero">
+      <div class="hero-card" data-fade>
+        <span class="kicker">Video workbench</span>
+        <h1 class="hero-title">Upload, index, track and annotate match video.</h1>
+        <p class="hero-copy">This is the long-term video layer: upload or connect licensed files, create clips, detect players and map events back into the player DNA model.</p>
+        <div class="hero-actions">
+          <span class="chip good"><strong>Long-term:</strong> tracking + CV</span>
+          <span class="chip warn"><strong>MVP:</strong> upload + metadata + annotation</span>
+        </div>
+      </div>
+      <div class="panel" data-fade>
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Processing status</h2>
+            <p class="section-copy">The pipeline remains explicit about uncertainty and stage completion.</p>
+          </div>
+        </div>
+        <div class="progress-track">
+          <div class="progress-step"><span>1. Upload</span><span class="progress-pill done">Done</span></div>
+          <div class="progress-step"><span>2. Transcode</span><span class="progress-pill done">Done</span></div>
+          <div class="progress-step"><span>3. Detect players & ball</span><span class="progress-pill active">Running</span></div>
+          <div class="progress-step"><span>4. Track sequences</span><span class="progress-pill">Queued</span></div>
+          <div class="progress-step"><span>5. Extract events</span><span class="progress-pill">Queued</span></div>
+          <div class="progress-step"><span>6. Update Player DNA</span><span class="progress-pill">Queued</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="layout-grid">
+      <div class="panel span-6" data-fade>
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Upload zone</h2>
+            <p class="section-copy">Drop a file or click to add a match. The UI is ready for a managed storage backend.</p>
+          </div>
+        </div>
+        <div class="upload-zone" data-upload-zone>
+          <div class="upload-icon">⤴</div>
+          <div>
+            <strong>Drop broadcast video here</strong>
+            <p class="body-muted">Supports licensed files, cloud links and event clips.</p>
+          </div>
+          <input type="file" hidden data-upload-input />
+          <button class="btn btn-primary" type="button">Choose file</button>
+        </div>
+      </div>
+
+      <div class="panel span-6" data-fade>
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Clip queue</h2>
+            <p class="section-copy">Current content and pipeline context for the selected match.</p>
+          </div>
+        </div>
+        <div class="timeline" data-clip-list>
+          <div class="timeline-item">
+            <strong>Sample match loaded</strong>
+            <span class="tagline">Broadcast feed · 92 min · 1080p · tagged for pressing sequences and transitional moments.</span>
+            <div class="pills" style="margin-top:6px;">
+              <span class="chip info">Player ID ready</span>
+              <span class="chip warn">Occlusion risks</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel span-7" data-fade>
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Analysis layers</h2>
+            <p class="section-copy">A real system needs separate layers for detection, tracking, event extraction and tactical interpretation.</p>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div class="summary-card">
+            <div class="meta-label">Detection</div>
+            <p class="body-muted">Locate players, ball and pitch reference points before building any tactical interpretation.</p>
+          </div>
+          <div class="summary-card">
+            <div class="meta-label">Tracking</div>
+            <p class="body-muted">Maintain sequence identity across frames, even with frequent occlusion or camera cuts.</p>
+          </div>
+          <div class="summary-card">
+            <div class="meta-label">Event extraction</div>
+            <p class="body-muted">Mark passes, pressures, recoveries, shots and transitions as explainable events.</p>
+          </div>
+          <div class="summary-card">
+            <div class="meta-label">Tactical interpretation</div>
+            <p class="body-muted">Convert movement patterns into line height, compactness, pressing structure and spacing signals.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel span-5" data-fade>
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Known limits</h2>
+            <p class="section-copy">The model must explain what it cannot know from broadcast footage alone.</p>
+          </div>
+        </div>
+        <div class="list">
+          <div class="list-item"><strong>Occlusion</strong><span class="body-muted">Some players are hidden by the camera angle.</span></div>
+          <div class="list-item"><strong>Camera height</strong><span class="body-muted">High or low broadcast angles change spatial accuracy.</span></div>
+          <div class="list-item"><strong>Frame quality</strong><span class="body-muted">Compression and blur affect detection confidence.</span></div>
+          <div class="list-item"><strong>Context missing</strong><span class="body-muted">Without tracking data, some off-ball conclusions stay probabilistic.</span></div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

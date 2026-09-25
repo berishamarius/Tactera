@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reports | K-Eye Football Intelligence</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+<body data-page="reports">
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark"></div>
+        <div>
+          <div class="brand-title">K-Eye Football Intelligence</div>
+          <span class="brand-subtitle">Reports, shortlists and decision trails</span>
+        </div>
+      </div>
+      <nav class="nav">
+        <a data-nav="dashboard" href="index.html">Dashboard</a>
+        <a data-nav="players" href="players.html">Players</a>
+        <a data-nav="club" href="club-dna.html">Club DNA</a>
+        <a data-nav="video" href="video.html">Video</a>
+        <a data-nav="reports" href="reports.html">Reports</a>
+        <a data-nav="platform" href="platform.html">Platform</a>
+        <a data-nav="settings" href="settings.html">Settings</a>
+      </nav>
+      <div class="topbar-actions">
+        <span class="pill">Explainable outputs</span>
+        <a class="btn btn-primary" href="platform.html">Audit trail</a>
+      </div>
+    </header>
+
+    <section class="page-hero">
+      <div class="hero-card" data-fade>
+        <span class="kicker">Scout reports</span>
+        <h1 class="hero-title">Shortlists with reasons, risks and confidence.</h1>
+        <p class="hero-copy">Reports are built for actual decision-making: candidates are ranked, but the platform always explains why, where the uncertainty sits and which video evidence matters most.</p>
+        <div class="hero-actions">
+          <span class="chip info"><strong>Output:</strong> PDF, dashboard and export feed</span>
+          <span class="chip good"><strong>Layer:</strong> Claude Haiku report assistant</span>
+        </div>
+      </div>
+      <div class="panel" data-fade>
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Decision rules</h2>
+            <p class="section-copy">The report generator stays aligned with the club DNA and the role model.</p>
+          </div>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item"><strong>1. Fit first</strong><span class="tagline">Search begins from the club's tactical and financial constraints.</span></div>
+          <div class="timeline-item"><strong>2. Evidence second</strong><span class="tagline">Match reports, event data and video confirmations are compared.</span></div>
+          <div class="timeline-item"><strong>3. Risk visible</strong><span class="tagline">Low sample size, weak opposition or missing video reduce confidence.</span></div>
+          <div class="timeline-item"><strong>4. Human decides</strong><span class="tagline">The scout remains the final authority on the transfer call.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="layout-grid">
+      <div class="panel span-7" data-fade>
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Shortlist builder</h2>
+            <p class="section-copy">Example reports and shortlist blocks ready for export.</p>
+          </div>
+        </div>
+        <div class="stack" data-report-cards></div>
+      </div>
+
+      <div class="panel span-5" data-fade>
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Evidence trail</h2>
+            <p class="section-copy">Every output can be traced back to source quality and model confidence.</p>
+          </div>
+        </div>
+        <div class="list">
+          <div class="evidence-item"><strong>Data origin</strong><p class="body-muted">Sportmonks, video upload and internal club configuration are all stamped in the record.</p></div>
+          <div class="evidence-item"><strong>Confidence</strong><p class="body-muted">Confidence is shown per component and never hidden inside a single monolithic score.</p></div>
+          <div class="evidence-item"><strong>Reason codes</strong><p class="body-muted">Why a candidate appears is attached to each shortlist entry, not buried in a summary.</p></div>
+          <div class="evidence-item"><strong>Export path</strong><p class="body-muted">Reports can be handed over as a dashboard view or a PDF-style scout note.</p></div>
+        </div>
+      </div>
+
+      <div class="panel span-12" data-fade>
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Monitoring layer</h2>
+            <p class="section-copy">The system can track whether a target player still matches the club's search after a few months.</p>
+          </div>
+        </div>
+        <div class="grid-3">
+          <div class="mini-card"><div class="card-label">Form drift</div><p class="body-muted">Detects if the player trend is still aligned with the recruitment case.</p></div>
+          <div class="mini-card"><div class="card-label">Video refresh</div><p class="body-muted">New clips can strengthen or weaken a candidate's confidence rating.</p></div>
+          <div class="mini-card"><div class="card-label">Market change</div><p class="body-muted">Contract, age or league shifts can trigger shortlist re-ranking.</p></div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

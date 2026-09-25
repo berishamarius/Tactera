@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Players | K-Eye Football Intelligence</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+<body data-page="players">
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark"></div>
+        <div>
+          <div class="brand-title">K-Eye Football Intelligence</div>
+          <span class="brand-subtitle">Player search and fit comparison</span>
+        </div>
+      </div>
+      <nav class="nav">
+        <a data-nav="dashboard" href="index.html">Dashboard</a>
+        <a data-nav="players" href="players.html">Players</a>
+        <a data-nav="club" href="club-dna.html">Club DNA</a>
+        <a data-nav="video" href="video.html">Video</a>
+        <a data-nav="reports" href="reports.html">Reports</a>
+        <a data-nav="platform" href="platform.html">Platform</a>
+        <a data-nav="settings" href="settings.html">Settings</a>
+      </nav>
+      <div class="topbar-actions">
+        <a class="btn btn-ghost" href="club-dna.html">Refine DNA</a>
+        <a class="btn btn-primary" href="video.html">Open video evidence</a>
+      </div>
+    </header>
+
+    <section class="page-hero">
+      <div class="hero-card" data-fade>
+        <span class="kicker">Global player search</span>
+        <h1 class="hero-title">Search the market by fit, not just by stats.</h1>
+        <p class="hero-copy">Filter players by role, league, age, fit threshold and under-the-radar signal. The table is designed for dense decision-making, while the right rail keeps the current top match visible.</p>
+        <div class="hero-actions">
+          <span class="chip info"><strong>Compare:</strong> role, tactical and development fit</span>
+          <span class="chip good"><strong>Evidence:</strong> confidence and video readiness</span>
+        </div>
+      </div>
+      <div class="panel" data-fade>
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Search controls</h2>
+            <p class="section-copy">Fast filters, broadcast-safe, built for scouts and analysts.</p>
+          </div>
+        </div>
+        <div class="stack">
+          <div class="form-group">
+            <label>Position
+              <select data-filter="position">
+                <option value="all">All</option>
+                <option value="CB">CB</option>
+                <option value="6">6</option>
+                <option value="8">8</option>
+                <option value="RW">RW</option>
+                <option value="9">9</option>
+              </select>
+            </label>
+          </div>
+          <div class="form-group">
+            <label>League
+              <select data-filter="league">
+                <option value="all">All</option>
+                <option value="Top Division">Top Division</option>
+                <option value="Second Division">Second Division</option>
+                <option value="Third Division">Third Division</option>
+              </select>
+            </label>
+          </div>
+          <div class="slider-group">
+            <label>Min age <span class="range-value" data-min-age>0</span></label>
+            <input type="range" min="16" max="34" value="0" data-filter="minAge" />
+          </div>
+          <div class="slider-group">
+            <label>Max age <span class="range-value" data-max-age>40</span></label>
+            <input type="range" min="18" max="40" value="40" data-filter="maxAge" />
+          </div>
+          <div class="slider-group">
+            <label>Minimum club-fit <span class="range-value" data-min-fit>0%</span></label>
+            <input type="range" min="0" max="100" value="0" data-filter="minFit" />
+          </div>
+          <label class="chip" style="justify-content:space-between; cursor:pointer;">
+            <span>Only under-the-radar profiles</span>
+            <input type="checkbox" data-filter="underRadar" />
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <section class="layout-grid">
+      <div class="table-card span-8" data-fade>
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Candidate table</h2>
+            <p class="section-copy"><span data-player-count>0 Kandidaten</span> currently match the active filter set.</p>
+          </div>
+          <span class="pill">Fit-first ranking</span>
+        </div>
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Player</th>
+                <th>Pos</th>
+                <th>League</th>
+                <th>Age</th>
+                <th>Club fit</th>
+                <th>Role fit</th>
+                <th>Tactical fit</th>
+                <th>Development</th>
+                <th>Confidence</th>
+                <th>Tag</th>
+              </tr>
+            </thead>
+            <tbody data-player-table></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="panel span-4" data-fade>
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Comparison panel</h2>
+            <p class="section-copy">The current best match and the evidence behind it.</p>
+          </div>
+        </div>
+        <div data-compare-panel></div>
+      </div>
+
+      <div class="panel span-12" data-fade>
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Scouting logic</h2>
+            <p class="section-copy">Every player profile is built from the same transparent components.</p>
+          </div>
+        </div>
+        <div class="grid-3">
+          <div class="mini-card">
+            <div class="card-label">Role fit</div>
+            <p class="body-muted">Matches movement patterns, position discipline and task-specific requirements.</p>
+          </div>
+          <div class="mini-card">
+            <div class="card-label">Context correction</div>
+            <p class="body-muted">Adjusts for league strength, opponent quality, minutes played and team style.</p>
+          </div>
+          <div class="mini-card">
+            <div class="card-label">Risk visibility</div>
+            <p class="body-muted">Shows when the sample size is small, the video is incomplete or the match context is noisy.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Club DNA | K-Eye Football Intelligence</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+<body data-page="club">
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark"></div>
+        <div>
+          <div class="brand-title">K-Eye Football Intelligence</div>
+          <span class="brand-subtitle">Club DNA editor and role model</span>
+        </div>
+      </div>
+      <nav class="nav">
+        <a data-nav="dashboard" href="index.html">Dashboard</a>
+        <a data-nav="players" href="players.html">Players</a>
+        <a data-nav="club" href="club-dna.html">Club DNA</a>
+        <a data-nav="video" href="video.html">Video</a>
+        <a data-nav="reports" href="reports.html">Reports</a>
+        <a data-nav="platform" href="platform.html">Platform</a>
+        <a data-nav="settings" href="settings.html">Settings</a>
+      </nav>
+      <div class="topbar-actions">
+        <span class="pill">Editable club model</span>
+        <a class="btn btn-primary" href="reports.html">Generate shortlist</a>
+      </div>
+    </header>
+
+    <section class="page-hero">
+      <div class="hero-card" data-fade>
+        <span class="kicker">Club DNA</span>
+        <h1 class="hero-title">Translate football identity into a machine-readable profile.</h1>
+        <p class="hero-copy">This workspace turns a club's football idea into structured sliders, thresholds and reference roles. That is the core comparison layer for the whole system.</p>
+        <div class="hero-actions">
+          <span class="chip info"><strong>Use case:</strong> recruitment, shortlist and internal benchmark</span>
+          <span class="chip warn"><strong>Output:</strong> explainable fit architecture</span>
+        </div>
+      </div>
+      <div class="panel" data-fade>
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Current score</h2>
+            <p class="section-copy">The current DNA setup suggests the overall style signature.</p>
+          </div>
+        </div>
+        <div class="stat">
+          <div class="stat-head">
+            <div>
+              <div class="metric-label">Style signature</div>
+              <div class="stat-value" data-dna-score>0%</div>
+            </div>
+            <span class="chip good">System ready</span>
+          </div>
+          <p class="body-muted" data-dna-note>balanced and flexible</p>
+          <div class="stat-bars">
+            <div class="bar"><span style="width:74%"></span></div>
+            <div class="bar"><span style="width:80%"></span></div>
+            <div class="bar"><span style="width:68%"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="layout-grid">
+      <div class="panel span-7" data-fade>
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">DNA controls</h2>
+            <p class="section-copy">Tune tactical identity, budget reality and age strategy in one place.</p>
+          </div>
+        </div>
+        <div class="stack">
+          <div class="slider-group">
+            <label>Pressing intensity <span class="range-value" data-out="pressing">74%</span></label>
+            <input type="range" min="0" max="100" value="74" data-dna="pressing" />
+          </div>
+          <div class="slider-group">
+            <label>Build-up control <span class="range-value" data-out="buildUp">80%</span></label>
+            <input type="range" min="0" max="100" value="80" data-dna="buildUp" />
+          </div>
+          <div class="slider-group">
+            <label>Defensive line <span class="range-value" data-out="lineHeight">68%</span></label>
+            <input type="range" min="0" max="100" value="68" data-dna="lineHeight" />
+          </div>
+          <div class="slider-group">
+            <label>Transition intensity <span class="range-value" data-out="transition">76%</span></label>
+            <input type="range" min="0" max="100" value="76" data-dna="transition" />
+          </div>
+          <div class="slider-group">
+            <label>Tempo <span class="range-value" data-out="tempo">72%</span></label>
+            <input type="range" min="0" max="100" value="72" data-dna="tempo" />
+          </div>
+          <div class="slider-group">
+            <label>Budget flexibility <span class="range-value" data-out="budget">58%</span></label>
+            <input type="range" min="0" max="100" value="58" data-dna="budget" />
+          </div>
+          <div class="slider-group">
+            <label>Age preference <span class="range-value" data-out="agePreference">64%</span></label>
+            <input type="range" min="0" max="100" value="64" data-dna="agePreference" />
+          </div>
+        </div>
+      </div>
+
+      <div class="panel span-5" data-fade>
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Role library</h2>
+            <p class="section-copy">Reference definitions for the search engine and report layer.</p>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div class="role-card"><strong>Ball-winning 6</strong><p class="body-muted">High scanning, robust duels, passing into the next line.</p></div>
+          <div class="role-card"><strong>Pressing winger</strong><p class="body-muted">Aggressive first action, counterpressure and depth runs.</p></div>
+          <div class="role-card"><strong>Hybrid 8</strong><p class="body-muted">Carries, links, and arrives in the box on time.</p></div>
+          <div class="role-card"><strong>Line leader CB</strong><p class="body-muted">Organizes rest-defense and compresses space.</p></div>
+        </div>
+      </div>
+
+      <div class="panel span-12" data-fade>
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Fit consequences</h2>
+            <p class="section-copy">Changing the DNA updates the meaning of every player score.</p>
+          </div>
+        </div>
+        <div class="grid-3">
+          <div class="tactic-card">
+            <div class="card-label">If pressing goes up</div>
+            <p class="body-muted">The platform prefers players with intense recovery runs, immediate counterpressure and high duel frequency.</p>
+          </div>
+          <div class="tactic-card">
+            <div class="card-label">If build-up goes up</div>
+            <p class="body-muted">The system weights pass choice, press resistance and positional cleanliness more strongly.</p>
+          </div>
+          <div class="tactic-card">
+            <div class="card-label">If budget tightens</div>
+            <p class="body-muted">The engine shifts to under-the-radar targets, contract situations and development upside.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

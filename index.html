@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>K-Eye Football Intelligence</title>
+  <meta name="description" content="Scouting-Intelligence-Plattform für daten- und videobasierte Spieleranalyse, Club-DNA und Fit-Matching." />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+<body data-page="dashboard">
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark"></div>
+        <div>
+          <div class="brand-title">K-Eye Football Intelligence</div>
+          <span class="brand-subtitle">Clubs verstehen. Spieler vergleichen. Entscheidungen begründen.</span>
+        </div>
+      </div>
+      <nav class="nav">
+        <a data-nav="dashboard" href="index.html">Dashboard</a>
+        <a data-nav="players" href="players.html">Players</a>
+        <a data-nav="club" href="club-dna.html">Club DNA</a>
+        <a data-nav="video" href="video.html">Video</a>
+        <a data-nav="reports" href="reports.html">Reports</a>
+        <a data-nav="platform" href="platform.html">Platform</a>
+        <a data-nav="settings" href="settings.html">Settings</a>
+      </nav>
+      <div class="topbar-actions">
+        <span class="pill"><span class="dot"></span> Live ingestion ready</span>
+        <a class="btn btn-primary" href="players.html">Open scouting workspace</a>
+      </div>
+    </header>
+
+    <section class="page-hero">
+      <div class="hero-card" data-fade>
+        <span class="kicker">Scouting Intelligence System</span>
+        <h1 class="hero-title">Vom Video-Upload bis zur begründeten Shortlist.</h1>
+        <p class="hero-copy">
+          Eine Plattform, die Club-DNA, Rollenprofile, Datenquellen, Videoanalyse und interne Referenzen zusammenführt.
+          Nicht als klassische Scouting-Bank, sondern als operatives System für Analyse, Vergleich und Entscheidungsunterstützung.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="video.html">Video workflow</a>
+          <a class="btn btn-ghost" href="club-dna.html">Define club DNA</a>
+        </div>
+      </div>
+      <div class="hero-metrics">
+        <div class="metric-grid">
+          <div class="metric" data-dash-card>
+            <div class="metric-label">Ingested datasets</div>
+            <div class="metric-value">18</div>
+            <div class="metric-footnote">League, team, player and video sources merged.</div>
+          </div>
+          <div class="metric" data-dash-card>
+            <div class="metric-label">Fit-ranked players</div>
+            <div class="metric-value">124</div>
+            <div class="metric-footnote">Compared against the current club profile.</div>
+          </div>
+          <div class="metric" data-dash-card>
+            <div class="metric-label">Under-the-radar flags</div>
+            <div class="metric-value">31</div>
+            <div class="metric-footnote">Low visibility, strong fit, explainable reasons.</div>
+          </div>
+          <div class="metric" data-dash-card>
+            <div class="metric-label">Confidence weighted</div>
+            <div class="metric-value">0.82</div>
+            <div class="metric-footnote">Transparent confidence layer across all scores.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="layout-grid">
+      <div class="panel span-8" data-fade>
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">System map</h2>
+            <p class="section-copy">A fully thought-through workflow from upload and ingestion to scouting reports and season monitoring.</p>
+          </div>
+          <span class="chip info"><strong>Model layer:</strong> Claude Haiku + rules</span>
+        </div>
+        <div class="flow">
+          <div class="flow-step">
+            <span class="num">01</span>
+            <strong>Sources & upload</strong>
+            <p class="body-muted">Football APIs, video uploads, tracked data, and club inputs enter the same pipeline.</p>
+          </div>
+          <div class="flow-step">
+            <span class="num">02</span>
+            <strong>Normalization</strong>
+            <p class="body-muted">Entities, competitions, roles and event data are standardized into one model.</p>
+          </div>
+          <div class="flow-step">
+            <span class="num">03</span>
+            <strong>DNA & fit</strong>
+            <p class="body-muted">Club DNA, player DNA and role DNA are compared via transparent scoring components.</p>
+          </div>
+          <div class="flow-step">
+            <span class="num">04</span>
+            <strong>Scout output</strong>
+            <p class="body-muted">Shortlists, evidence, risks and exportable reports feed the human decision process.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel span-4" data-fade>
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Club DNA snapshot</h2>
+            <p class="section-copy">Example configuration for a pressing, transition-heavy side.</p>
+          </div>
+        </div>
+        <div class="list">
+          <div class="list-item"><strong>Pressing intensity</strong><span class="body-muted">High, with clear triggers and compact distances.</span></div>
+          <div class="list-item"><strong>Build-up style</strong><span class="body-muted">Controlled, but vertical once the first line is broken.</span></div>
+          <div class="list-item"><strong>Defensive line</strong><span class="body-muted">Advanced, with rest-defense discipline.</span></div>
+          <div class="list-item"><strong>Budget window</strong><span class="body-muted">Medium, with emphasis on resale value and hidden upside.</span></div>
+        </div>
+      </div>
+
+      <div class="panel span-7" data-fade>
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Under-the-radar engine</h2>
+            <p class="section-copy">Candidates who do not dominate public lists but match the club's model unusually well.</p>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div class="mini-card">
+            <div class="card-label">Why they surface</div>
+            <p class="body-muted">Low media visibility, strong age curve, positive development slope, and fit against the club's internal benchmark.</p>
+          </div>
+          <div class="mini-card">
+            <div class="card-label">How they are scored</div>
+            <p class="body-muted">No opaque talent score. Every candidate receives fit reasons, confidence values and clear caveats.</p>
+          </div>
+          <div class="mini-card">
+            <div class="card-label">Decision safety</div>
+            <p class="body-muted">The system highlights uncertainty when data volume, opponent strength or video coverage is thin.</p>
+          </div>
+          <div class="mini-card">
+            <div class="card-label">Scout role</div>
+            <p class="body-muted">Scout remains the final decision-maker, with the platform acting as a highly structured assistant.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel span-5" data-fade>
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Recent signals</h2>
+            <p class="section-copy">A live feed of the system's current state and priorities.</p>
+          </div>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <strong>New video uploaded</strong>
+            <span class="tagline">Broadcast file from a second division match queued for detection and tagging.</span>
+          </div>
+          <div class="timeline-item">
+            <strong>Confidence drop flagged</strong>
+            <span class="tagline">One player profile has a smaller sample size against top opponents than expected.</span>
+          </div>
+          <div class="timeline-item">
+            <strong>Shortlist updated</strong>
+            <span class="tagline">Club-fit candidate list now combines age, budget, tactical match and upside.</span>
+          </div>
+          <div class="timeline-item">
+            <strong>Report ready</strong>
+            <span class="tagline">Claude Haiku generated an evidence summary for scout review, not for autonomous decisioning.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>Built as a multi-page prototype, not a single-page mockup.</span>
+      <span>Next step: connect real APIs and replace mock data with live ingestion.</span>
+    </footer>
+  </div>
+</body>
+</html>
